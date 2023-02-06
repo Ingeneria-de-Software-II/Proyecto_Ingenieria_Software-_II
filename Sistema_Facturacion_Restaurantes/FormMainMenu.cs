@@ -200,7 +200,7 @@ namespace Sistema_Facturacion_Restaurantes
         {
             lblTitle.Text = "Clientes";
             FrmClienteCatalogo fcc = new FrmClienteCatalogo(Rol,this);
-            fcc.btnSeleccionarCliente.Hide();
+            fcc.btnSeleccionarCliente.Visible = false;
             OpenChildForm(fcc, sender);   
         }
         private void btnReservar_Click(object sender, EventArgs e)
