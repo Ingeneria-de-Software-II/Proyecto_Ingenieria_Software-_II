@@ -54,8 +54,8 @@ namespace Sistema_Facturacion_Restaurantes.Forms
         private void FormCustomers_Load(object sender, EventArgs e)
         {
             //LoadTheme();
-            if (!AgregarPlatoAOrden)
-                btnAgregarPlatoAOrden.Hide(); // Oculto ese boton si no voy a agregar plato a la orden
+            //if (!AgregarPlatoAOrden)
+            //    btnAgregarPlatoAOrden.Hide(); // Oculto ese boton si no voy a agregar plato a la orden
         }
 
         private void LoadTheme()
@@ -108,16 +108,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (dgvPlatos.Rows.Count == 0 || dgvPlatos.CurrentCell.RowIndex < 0)
-            {
-                MessageBox.Show("Para actualizar un registro debe seleccionar una fila");
-                return;
-            }
 
-            int PlatoID = (int)this.dgvPlatos.CurrentRow.Cells[0].Value;
-
-            FrmPlatoIngredientesCatalogo pic = new FrmPlatoIngredientesCatalogo(PlatoID,rol);
-            pic.ShowDialog();
         }
 
         private void btnAgregarPlatoAOrden_Click(object sender, EventArgs e)
@@ -133,6 +124,11 @@ namespace Sistema_Facturacion_Restaurantes.Forms
                 AgregarPlatoAOrden = false;
                 this.Dispose();
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

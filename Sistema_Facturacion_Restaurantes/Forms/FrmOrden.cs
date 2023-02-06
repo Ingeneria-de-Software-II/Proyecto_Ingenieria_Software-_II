@@ -18,6 +18,8 @@ namespace Sistema_Facturacion_Restaurantes.Forms
         public Boolean isUpdate = false;
         public int EditableOrdenID = 0;
         String rol;
+
+        public bool cancelado = false; 
         public FrmOrden(int Sucursal,String rolUsuario)
         {
             SucursalID = Sucursal;
@@ -122,6 +124,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            cancelado = true;
             this.Dispose();
         }
     }

@@ -32,12 +32,14 @@ namespace Sistema_Facturacion_Restaurantes.Data
                 ParDato.Value = usuario;
                 SqlCmd.Parameters.Add(ParDato);
 
+
                 SqlParameter ParDato1 = new SqlParameter();
                 ParDato1.ParameterName = "@contrasena";
                 ParDato1.SqlDbType = SqlDbType.VarChar;
                 ParDato1.Size = 100;
                 ParDato1.Value = contraseña;
                 SqlCmd.Parameters.Add(ParDato1);
+
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DTResultado);
@@ -46,6 +48,7 @@ namespace Sistema_Facturacion_Restaurantes.Data
             catch (Exception ex)
             {
                 DTResultado = null;
+                MessageBox.Show("excepción" + ex);
             }
             return DTResultado;
         }

@@ -69,6 +69,9 @@ namespace Sistema_Facturacion_Restaurantes
             this.Text = String.Empty;
             //this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            WindowState = FormWindowState.Maximized;
+
+            IniciarVentana();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -95,6 +98,16 @@ namespace Sistema_Facturacion_Restaurantes
             string color = ThemeColor.ColorList[index];
             return ColorTranslator.FromHtml(color);
         }*/
+
+        public void IniciarVentana()
+        {
+            panelProductos_Desplegado = false;
+            panelPersonas_Desplegado = false;
+
+            pnlProductosContainer.Height = pnlProductosContainer.MinimumSize.Height;
+            pnlPersonasContainer.Height = pnlPersonasContainer.MinimumSize.Height;
+        }
+        
 
         private void ActivateButton(object btnSender)
         {
@@ -139,83 +152,50 @@ namespace Sistema_Facturacion_Restaurantes
             childForm.Show();
             //lblTitle.Text = childForm.Text;
         }
-
         private void btnProducts_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormSucursal(Rol), sender);
         }
-
         private void btnOrders_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Ordenes";
             OpenChildForm(new Forms.FrmOrdenCatalogo(Rol), sender);
         }
-
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormPlatos(Rol), sender);
         }
-
         private void btnReporting_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.formBebidas(Rol), sender);
         }
-
         private void btnNotifications_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormNotifications(), sender);
         }
-
         private void btnSetting_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormSetting(), sender);
         }
-
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
             
             activeForm.Close();
             Reset();
         }
-
         private void Reset()
         {
             DisableButton();
             lblTitle.Text = "Home";
             panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
-            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
             btnCloseChildForm.Visible = false;
         }
-
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-        }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void btnClientes_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Clientes";
@@ -223,42 +203,35 @@ namespace Sistema_Facturacion_Restaurantes
             fcc.btnSeleccionarCliente.Hide();
             OpenChildForm(fcc, sender);   
         }
-
         private void btnReservar_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Reservaciones";
             OpenChildForm(new Forms.frmReserva(Rol), sender);
         }
-
         private void btnConfig_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FrmConfig(NombreUsuario, Rol), sender);
         }
-
         private void btnSucursal_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Sucursales";
             OpenChildForm(new Forms.FormSucursal(Rol), sender);
         }
-
         private void btnPlatos_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Platos";
             OpenChildForm(new Forms.FormPlatos(Rol), sender);
         }
-
         private void btnBebidas_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Bebidas";
             OpenChildForm(new Forms.formBebidas(Rol), sender);   //Pendiente no abre el correctamente aún 
         }
-
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Empleados";
            OpenChildForm(new Forms.FrmEmpleadoCatalogo(), sender);     
         }
-
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Proveedores";
@@ -266,11 +239,67 @@ namespace Sistema_Facturacion_Restaurantes
             fpc.btnSeleccionarProveedor.Hide();
             OpenChildForm(fpc, sender);
         }
-
         private void btnReport_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Reportes.FrmReportes(), sender);
         }
 
+
+        //Botones de la Ventana
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnRestaurar.Visible = true;
+            btnMaximizar.Visible = false;
+        }
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+
+        private bool panelProductos_Desplegado;
+        private bool panelPersonas_Desplegado;
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            panelProductos_Desplegado = !panelProductos_Desplegado;
+            if (panelProductos_Desplegado)
+            {
+                btnProductos.IconChar = FontAwesome.Sharp.IconChar.CircleChevronUp;
+                pnlProductosContainer.Height = pnlProductosContainer.MaximumSize.Height;
+            }
+            else
+            {
+                btnProductos.IconChar = FontAwesome.Sharp.IconChar.CircleChevronDown;
+                pnlProductosContainer.Height = pnlProductosContainer.MinimumSize.Height;
+            }
+        }
+
+        private void btnPersonas_Click(object sender, EventArgs e)
+        {
+            panelPersonas_Desplegado = !panelPersonas_Desplegado;
+            if (panelPersonas_Desplegado)
+            {
+                btnPersonas.IconChar = FontAwesome.Sharp.IconChar.CircleChevronUp;
+                pnlPersonasContainer.Height = pnlPersonasContainer.MaximumSize.Height;
+            }
+            else
+            {
+                btnPersonas.IconChar = FontAwesome.Sharp.IconChar.CircleChevronDown;
+                pnlPersonasContainer.Height = pnlPersonasContainer.MinimumSize.Height;
+            }
+        }
     }
 }

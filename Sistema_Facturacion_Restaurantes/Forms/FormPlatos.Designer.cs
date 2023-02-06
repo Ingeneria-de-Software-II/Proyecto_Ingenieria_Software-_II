@@ -28,130 +28,232 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAgregarPlatoAOrden = new System.Windows.Forms.Button();
             this.dgvPlatos = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlNuevoPlato = new System.Windows.Forms.Panel();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.btnActualizar = new FontAwesome.Sharp.IconButton();
+            this.btnAgregar = new FontAwesome.Sharp.IconButton();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnAgregarPlatoAOrden = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlatos)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // dgvPlatos
+            // 
+            this.dgvPlatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPlatos.BackgroundColor = System.Drawing.Color.MintCream;
+            this.dgvPlatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPlatos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPlatos.Location = new System.Drawing.Point(16, 16);
+            this.dgvPlatos.Name = "dgvPlatos";
+            this.dgvPlatos.RowHeadersWidth = 51;
+            this.dgvPlatos.Size = new System.Drawing.Size(971, 433);
+            this.dgvPlatos.TabIndex = 36;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MintCream;
+            this.panel1.Controls.Add(this.dgvPlatos);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 60);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(16, 16, 16, 0);
+            this.panel1.Size = new System.Drawing.Size(1003, 449);
+            this.panel1.TabIndex = 37;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.MintCream;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.flowLayoutPanel2);
+            this.panel2.Controls.Add(this.flowLayoutPanel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1003, 60);
+            this.panel2.TabIndex = 38;
+            // 
+            // pnlNuevoPlato
+            // 
+            this.pnlNuevoPlato.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlNuevoPlato.Location = new System.Drawing.Point(0, 60);
+            this.pnlNuevoPlato.Name = "pnlNuevoPlato";
+            this.pnlNuevoPlato.Size = new System.Drawing.Size(1003, 0);
+            this.pnlNuevoPlato.TabIndex = 39;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(707, 409);
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnEliminar.IconColor = System.Drawing.Color.White;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 26;
+            this.btnEliminar.Location = new System.Drawing.Point(194, 14);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(131, 48);
-            this.btnEliminar.TabIndex = 17;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(32, 32);
+            this.btnEliminar.TabIndex = 23;
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(570, 409);
+            this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.ArrowLeftRotate;
+            this.btnActualizar.IconColor = System.Drawing.Color.White;
+            this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnActualizar.IconSize = 26;
+            this.btnActualizar.Location = new System.Drawing.Point(154, 14);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(131, 48);
-            this.btnActualizar.TabIndex = 16;
-            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(32, 32);
+            this.btnActualizar.TabIndex = 21;
+            this.btnActualizar.Tag = "Actualizar x";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.AutoSize = true;
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(433, 410);
+            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.CirclePlus;
+            this.btnAgregar.IconColor = System.Drawing.Color.White;
+            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregar.IconSize = 26;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.Location = new System.Drawing.Point(16, 14);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(131, 48);
-            this.btnAgregar.TabIndex = 15;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Size = new System.Drawing.Size(130, 32);
+            this.btnAgregar.TabIndex = 20;
+            this.btnAgregar.Text = "Nuevo Plato";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // button1
+            // flowLayoutPanel1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(182, 410);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 48);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Ingredientes";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.flowLayoutPanel1.Controls.Add(this.btnAgregar);
+            this.flowLayoutPanel1.Controls.Add(this.btnActualizar);
+            this.flowLayoutPanel1.Controls.Add(this.btnEliminar);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(16, 14, 16, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 58);
+            this.flowLayoutPanel1.TabIndex = 24;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.iconButton1);
+            this.flowLayoutPanel2.Controls.Add(this.btnAgregarPlatoAOrden);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(273, 0);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(16, 14, 0, 14);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(728, 58);
+            this.flowLayoutPanel2.TabIndex = 25;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.AutoSize = true;
+            this.iconButton1.BackColor = System.Drawing.Color.MintCream;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CirclePlus;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 26;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(578, 14);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(130, 32);
+            this.iconButton1.TabIndex = 21;
+            this.iconButton1.Text = "Ingredientes";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // btnAgregarPlatoAOrden
             // 
-            this.btnAgregarPlatoAOrden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregarPlatoAOrden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnAgregarPlatoAOrden.AutoSize = true;
+            this.btnAgregarPlatoAOrden.BackColor = System.Drawing.Color.MintCream;
+            this.btnAgregarPlatoAOrden.FlatAppearance.BorderSize = 0;
             this.btnAgregarPlatoAOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarPlatoAOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarPlatoAOrden.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarPlatoAOrden.Location = new System.Drawing.Point(32, 410);
+            this.btnAgregarPlatoAOrden.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarPlatoAOrden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnAgregarPlatoAOrden.IconChar = FontAwesome.Sharp.IconChar.CirclePlus;
+            this.btnAgregarPlatoAOrden.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnAgregarPlatoAOrden.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregarPlatoAOrden.IconSize = 26;
+            this.btnAgregarPlatoAOrden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarPlatoAOrden.Location = new System.Drawing.Point(438, 14);
+            this.btnAgregarPlatoAOrden.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.btnAgregarPlatoAOrden.Name = "btnAgregarPlatoAOrden";
-            this.btnAgregarPlatoAOrden.Size = new System.Drawing.Size(144, 48);
-            this.btnAgregarPlatoAOrden.TabIndex = 19;
-            this.btnAgregarPlatoAOrden.Text = "Agregar a orden";
+            this.btnAgregarPlatoAOrden.Size = new System.Drawing.Size(136, 32);
+            this.btnAgregarPlatoAOrden.TabIndex = 22;
+            this.btnAgregarPlatoAOrden.Text = "Agregar Orden";
+            this.btnAgregarPlatoAOrden.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarPlatoAOrden.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarPlatoAOrden.UseVisualStyleBackColor = false;
             this.btnAgregarPlatoAOrden.Click += new System.EventHandler(this.btnAgregarPlatoAOrden_Click);
             // 
-            // dgvPlatos
-            // 
-            this.dgvPlatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPlatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPlatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPlatos.Location = new System.Drawing.Point(14, 24);
-            this.dgvPlatos.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvPlatos.Name = "dgvPlatos";
-            this.dgvPlatos.RowHeadersWidth = 51;
-            this.dgvPlatos.Size = new System.Drawing.Size(838, 366);
-            this.dgvPlatos.TabIndex = 36;
-            // 
             // FormPlatos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 477);
-            this.Controls.Add(this.btnAgregarPlatoAOrden);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.dgvPlatos);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(225)))), ((int)(((byte)(220)))));
+            this.ClientSize = new System.Drawing.Size(1003, 509);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlNuevoPlato);
+            this.Controls.Add(this.panel2);
             this.Name = "FormPlatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Platos";
             this.Load += new System.EventHandler(this.FormCustomers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlatos)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvPlatos;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnAgregarPlatoAOrden;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlNuevoPlato;
+        public FontAwesome.Sharp.IconButton btnEliminar;
+        public FontAwesome.Sharp.IconButton btnActualizar;
+        public FontAwesome.Sharp.IconButton btnAgregar;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        public FontAwesome.Sharp.IconButton iconButton1;
+        public FontAwesome.Sharp.IconButton btnAgregarPlatoAOrden;
     }
 }

@@ -26,7 +26,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
                     {
                         btnAgregar.Enabled = false;
                         btnActualizar.Enabled = false;
-                        btnCancelar.Enabled = false;
+                        btnEliminar.Enabled = false;
                         break;
                     }
                 case "Jefe Cocina":
@@ -51,8 +51,8 @@ namespace Sistema_Facturacion_Restaurantes.Forms
         private void FormReporting_Load(object sender, EventArgs e)
         {
             //LoadTheme();
-            if(!AgregarBebidaAOrden)
-                btnAgregarAOrden.Hide(); // Oculto ese boton si no voy a agregar plato a la orden
+            //if (!AgregarBebidaAOrden)
+            //    panel2.Hide(); // Oculto ese boton si no voy a agregar plato a la orden
         }
 
         private void LoadTheme()

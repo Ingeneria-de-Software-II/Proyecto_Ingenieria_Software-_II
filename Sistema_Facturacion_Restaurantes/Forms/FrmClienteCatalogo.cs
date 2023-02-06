@@ -113,6 +113,5 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             {
                 this.dgvCliente.Columns[0].Visible = false;
             }
-
     }
 }

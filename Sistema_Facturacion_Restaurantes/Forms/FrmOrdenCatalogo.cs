@@ -70,12 +70,18 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             FrmOrden o = new FrmOrden(SucursalID,rol);
             o.isUpdate = false;
             o.ShowDialog();
-            dgvOrdenes.DataSource = CComboxes.CargarOrden(SucursalID);
-            this.dgvOrdenes.Columns[0].Visible = false;
+
+            if (!o.cancelado)
+            {
+                dgvOrdenes.DataSource = CComboxes.CargarOrden(SucursalID);
+                this.dgvOrdenes.Columns[0].Visible = false;
+            }
+            
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            
             if (dgvOrdenes.Rows.Count == 0 || dgvOrdenes.CurrentCell.RowIndex < 0)
             {
                 MessageBox.Show("Para actualizar un registro debe seleccionar una fila");
@@ -87,19 +93,23 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 
             DataRow[] SelectedRow = CComboxes.MostrarOrdenForeignKey(SucursalID).Select("OrdenID = " + OrdenID);
 
-            int MeseroID = (int) SelectedRow[0][1];
+            int MeseroID = (int)SelectedRow[0][1];
             int MesaID = (int)SelectedRow[0][2];
             int ClienteID = (int)SelectedRow[0][3];
             string FechaRealizacion = Convert.ToString(this.dgvOrdenes.CurrentRow.Cells[4].Value);
 
             // Llamada al form que contine los datos de entrada del 'objeto' Sucursal
-            FrmOrden frmOrden = new FrmOrden(SucursalID,rol);
+            FrmOrden frmOrden = new FrmOrden(SucursalID, rol);
             frmOrden.isUpdate = true;
             frmOrden.fillSpaces(MeseroID, MesaID, ClienteID, FechaRealizacion);
             frmOrden.EditableOrdenID = OrdenID;
             frmOrden.ShowDialog();
-            this.dgvOrdenes.DataSource = CComboxes.CargarOrden(SucursalID);
-            this.dgvOrdenes.Columns[0].Visible = false;
+            if (!frmOrden.cancelado)
+            {
+                this.dgvOrdenes.DataSource = CComboxes.CargarOrden(SucursalID);
+                this.dgvOrdenes.Columns[0].Visible = false;
+            }
+
         }
 
         private void btnComida_Click(object sender, EventArgs e)
@@ -117,7 +127,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             co.ShowDialog();
 
             dgvOrdenes.DataSource = CComboxes.CargarOrden(SucursalID);
-            this.dgvOrdenes.Columns[0].Visible = false;
+            dgvOrdenes.Columns[0].Visible = false;
         }
 
         private void btnBebidas_Click(object sender, EventArgs e)

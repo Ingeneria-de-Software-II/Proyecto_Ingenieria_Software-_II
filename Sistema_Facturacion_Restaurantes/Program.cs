@@ -18,7 +18,7 @@ namespace Sistema_Facturacion_Restaurantes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmInicioSesion());
+            Application.Run(new FormMainMenu("Rodian", "ADMIN"));
         }
     }
 }

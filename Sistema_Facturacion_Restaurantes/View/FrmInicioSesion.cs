@@ -22,7 +22,7 @@ namespace Sistema_Facturacion_Restaurantes.View
         {
             DataTable dato;
             dato = CUsuario.Validar_acceso(this.txtUsuario.Text, this.txtContraseña.Text);
-            
+
             if (dato != null)
             {
                 if (dato.Rows.Count > 0)
@@ -48,7 +48,6 @@ namespace Sistema_Facturacion_Restaurantes.View
             }
             else
                 MessageBox.Show("No hay Conexión al Servidor", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
     }
 }

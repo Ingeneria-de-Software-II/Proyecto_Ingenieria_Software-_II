@@ -29,164 +29,265 @@
         private void InitializeComponent()
         {
             this.dgvOrdenes = new System.Windows.Forms.DataGridView();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.pnlAcciones = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
             this.cmbSucursal = new System.Windows.Forms.ComboBox();
-            this.btnComida = new System.Windows.Forms.Button();
-            this.btnBebidas = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnComida = new FontAwesome.Sharp.IconButton();
+            this.btnAgregar = new FontAwesome.Sharp.IconButton();
+            this.btnActualizar = new FontAwesome.Sharp.IconButton();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
+            this.pnlAcciones.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvOrdenes
             // 
             this.dgvOrdenes.AllowUserToResizeColumns = false;
             this.dgvOrdenes.AllowUserToResizeRows = false;
-            this.dgvOrdenes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvOrdenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOrdenes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrdenes.Location = new System.Drawing.Point(24, 53);
-            this.dgvOrdenes.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvOrdenes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvOrdenes.Location = new System.Drawing.Point(16, 16);
             this.dgvOrdenes.Name = "dgvOrdenes";
             this.dgvOrdenes.RowHeadersWidth = 51;
-            this.dgvOrdenes.Size = new System.Drawing.Size(1009, 397);
+            this.dgvOrdenes.Size = new System.Drawing.Size(1259, 529);
             this.dgvOrdenes.TabIndex = 27;
             // 
-            // btnEliminar
+            // pnlAcciones
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(891, 473);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(131, 48);
-            this.btnEliminar.TabIndex = 16;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.pnlAcciones.BackColor = System.Drawing.Color.MintCream;
+            this.pnlAcciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlAcciones.Controls.Add(this.flowLayoutPanel2);
+            this.pnlAcciones.Controls.Add(this.flowLayoutPanel1);
+            this.pnlAcciones.Controls.Add(this.flowLayoutPanel3);
+            this.pnlAcciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAcciones.Location = new System.Drawing.Point(0, 0);
+            this.pnlAcciones.Name = "pnlAcciones";
+            this.pnlAcciones.Size = new System.Drawing.Size(1291, 60);
+            this.pnlAcciones.TabIndex = 44;
             // 
-            // btnActualizar
+            // flowLayoutPanel2
             // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(752, 473);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(131, 48);
-            this.btnActualizar.TabIndex = 15;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.flowLayoutPanel2.Controls.Add(this.iconButton1);
+            this.flowLayoutPanel2.Controls.Add(this.btnComida);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(841, 0);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(16, 14, 0, 14);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(448, 58);
+            this.flowLayoutPanel2.TabIndex = 25;
             // 
-            // btnAgregar
+            // flowLayoutPanel1
             // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(613, 473);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(131, 48);
-            this.btnAgregar.TabIndex = 14;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.flowLayoutPanel1.Controls.Add(this.btnAgregar);
+            this.flowLayoutPanel1.Controls.Add(this.btnActualizar);
+            this.flowLayoutPanel1.Controls.Add(this.btnEliminar);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(322, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(16, 14, 16, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 58);
+            this.flowLayoutPanel1.TabIndex = 24;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.label10);
+            this.flowLayoutPanel3.Controls.Add(this.cmbSucursal);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(16, 16, 16, 0);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(322, 58);
+            this.flowLayoutPanel3.TabIndex = 26;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(21, 16);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.label10.Location = new System.Drawing.Point(16, 16);
+            this.label10.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 17);
-            this.label10.TabIndex = 38;
+            this.label10.Size = new System.Drawing.Size(68, 19);
+            this.label10.TabIndex = 40;
             this.label10.Text = "Sucursal:";
             // 
             // cmbSucursal
             // 
             this.cmbSucursal.FormattingEnabled = true;
-            this.cmbSucursal.Location = new System.Drawing.Point(105, 9);
-            this.cmbSucursal.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbSucursal.Location = new System.Drawing.Point(88, 16);
+            this.cmbSucursal.Margin = new System.Windows.Forms.Padding(0);
             this.cmbSucursal.Name = "cmbSucursal";
-            this.cmbSucursal.Size = new System.Drawing.Size(266, 24);
-            this.cmbSucursal.TabIndex = 39;
-            this.cmbSucursal.SelectedIndexChanged += new System.EventHandler(this.cmbSucursal_SelectedIndexChanged);
+            this.cmbSucursal.Size = new System.Drawing.Size(200, 21);
+            this.cmbSucursal.TabIndex = 41;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.MintCream;
+            this.panel2.Controls.Add(this.dgvOrdenes);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(16);
+            this.panel2.Size = new System.Drawing.Size(1291, 561);
+            this.panel2.TabIndex = 43;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.AutoSize = true;
+            this.iconButton1.BackColor = System.Drawing.Color.MintCream;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CirclePlus;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 26;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(336, 14);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(92, 32);
+            this.iconButton1.TabIndex = 21;
+            this.iconButton1.Text = "Bebidas";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.btnBebidas_Click);
             // 
             // btnComida
             // 
-            this.btnComida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnComida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnComida.AutoSize = true;
+            this.btnComida.BackColor = System.Drawing.Color.MintCream;
+            this.btnComida.FlatAppearance.BorderSize = 0;
             this.btnComida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComida.ForeColor = System.Drawing.Color.White;
-            this.btnComida.Location = new System.Drawing.Point(49, 473);
-            this.btnComida.Margin = new System.Windows.Forms.Padding(4);
+            this.btnComida.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnComida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnComida.IconChar = FontAwesome.Sharp.IconChar.CirclePlus;
+            this.btnComida.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnComida.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnComida.IconSize = 26;
+            this.btnComida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnComida.Location = new System.Drawing.Point(241, 14);
+            this.btnComida.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.btnComida.Name = "btnComida";
-            this.btnComida.Size = new System.Drawing.Size(131, 48);
-            this.btnComida.TabIndex = 40;
-            this.btnComida.Text = "Comidas";
+            this.btnComida.Size = new System.Drawing.Size(91, 32);
+            this.btnComida.TabIndex = 22;
+            this.btnComida.Text = "Comida";
+            this.btnComida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnComida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnComida.UseVisualStyleBackColor = false;
             this.btnComida.Click += new System.EventHandler(this.btnComida_Click);
             // 
-            // btnBebidas
+            // btnAgregar
             // 
-            this.btnBebidas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBebidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btnBebidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBebidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBebidas.ForeColor = System.Drawing.Color.White;
-            this.btnBebidas.Location = new System.Drawing.Point(197, 473);
-            this.btnBebidas.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBebidas.Name = "btnBebidas";
-            this.btnBebidas.Size = new System.Drawing.Size(131, 48);
-            this.btnBebidas.TabIndex = 41;
-            this.btnBebidas.Text = "Bebidas";
-            this.btnBebidas.UseVisualStyleBackColor = false;
-            this.btnBebidas.Click += new System.EventHandler(this.btnBebidas_Click);
+            this.btnAgregar.AutoSize = true;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.CirclePlus;
+            this.btnAgregar.IconColor = System.Drawing.Color.White;
+            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregar.IconSize = 26;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.Location = new System.Drawing.Point(16, 14);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(130, 32);
+            this.btnAgregar.TabIndex = 20;
+            this.btnAgregar.Text = "Nueva Orden";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.ArrowLeftRotate;
+            this.btnActualizar.IconColor = System.Drawing.Color.White;
+            this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnActualizar.IconSize = 26;
+            this.btnActualizar.Location = new System.Drawing.Point(154, 14);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(32, 32);
+            this.btnActualizar.TabIndex = 21;
+            this.btnActualizar.Tag = "Actualizar x";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnEliminar.IconColor = System.Drawing.Color.White;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 26;
+            this.btnEliminar.Location = new System.Drawing.Point(194, 14);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(32, 32);
+            this.btnEliminar.TabIndex = 23;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // FrmOrdenCatalogo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 554);
-            this.Controls.Add(this.btnBebidas);
-            this.Controls.Add(this.btnComida);
-            this.Controls.Add(this.cmbSucursal);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.dgvOrdenes);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnAgregar);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.ClientSize = new System.Drawing.Size(1291, 621);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlAcciones);
             this.Name = "FrmOrdenCatalogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ordenes";
             this.Load += new System.EventHandler(this.FormOrders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
+            this.pnlAcciones.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dgvOrdenes;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Panel pnlAcciones;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        public FontAwesome.Sharp.IconButton iconButton1;
+        public FontAwesome.Sharp.IconButton btnComida;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmbSucursal;
-        private System.Windows.Forms.Button btnComida;
-        private System.Windows.Forms.Button btnBebidas;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public FontAwesome.Sharp.IconButton btnAgregar;
+        public FontAwesome.Sharp.IconButton btnActualizar;
+        public FontAwesome.Sharp.IconButton btnEliminar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

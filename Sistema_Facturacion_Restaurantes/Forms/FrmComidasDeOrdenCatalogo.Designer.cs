@@ -30,108 +30,164 @@ namespace Sistema_Facturacion_Restaurantes.Forms
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvComidas = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAgregar = new FontAwesome.Sharp.IconButton();
+            this.btnActualizar = new FontAwesome.Sharp.IconButton();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComidas)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 12);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(12, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 29);
+            this.label5.Size = new System.Drawing.Size(90, 25);
             this.label5.TabIndex = 38;
             this.label5.Text = "Comidas";
             // 
-            // flowLayoutPanel1
+            // dgvComidas
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Controls.Add(this.btnCancelar);
-            this.flowLayoutPanel1.Controls.Add(this.btnActualizar);
-            this.flowLayoutPanel1.Controls.Add(this.btnAgregar);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 412);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(754, 54);
-            this.flowLayoutPanel1.TabIndex = 37;
+            this.dgvComidas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvComidas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.dgvComidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComidas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvComidas.Location = new System.Drawing.Point(12, 12);
+            this.dgvComidas.Name = "dgvComidas";
+            this.dgvComidas.RowHeadersWidth = 51;
+            this.dgvComidas.Size = new System.Drawing.Size(660, 287);
+            this.dgvComidas.TabIndex = 36;
             // 
-            // btnCancelar
+            // panel1
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(652, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(99, 40);
-            this.btnCancelar.TabIndex = 17;
-            this.btnCancelar.Text = "Eliminar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(96)))));
+            this.panel1.Controls.Add(this.flowLayoutPanel2);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(684, 50);
+            this.panel1.TabIndex = 39;
             // 
-            // btnActualizar
+            // flowLayoutPanel2
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(547, 3);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(99, 40);
-            this.btnActualizar.TabIndex = 16;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.flowLayoutPanel2.Controls.Add(this.btnEliminar);
+            this.flowLayoutPanel2.Controls.Add(this.btnActualizar);
+            this.flowLayoutPanel2.Controls.Add(this.btnAgregar);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(434, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 8, 12, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(250, 50);
+            this.flowLayoutPanel2.TabIndex = 39;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(439, 3);
+            this.btnAgregar.AutoSize = true;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.CirclePlus;
+            this.btnAgregar.IconColor = System.Drawing.Color.White;
+            this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregar.IconSize = 26;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.Location = new System.Drawing.Point(63, 8);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(102, 40);
-            this.btnAgregar.TabIndex = 15;
+            this.btnAgregar.Size = new System.Drawing.Size(95, 32);
+            this.btnAgregar.TabIndex = 20;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // dgvComidas
+            // btnActualizar
             // 
-            this.dgvComidas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvComidas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvComidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvComidas.Location = new System.Drawing.Point(14, 45);
-            this.dgvComidas.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvComidas.Name = "dgvComidas";
-            this.dgvComidas.RowHeadersWidth = 51;
-            this.dgvComidas.Size = new System.Drawing.Size(754, 361);
-            this.dgvComidas.TabIndex = 36;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.ArrowLeftRotate;
+            this.btnActualizar.IconColor = System.Drawing.Color.White;
+            this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnActualizar.IconSize = 26;
+            this.btnActualizar.Location = new System.Drawing.Point(166, 8);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(32, 32);
+            this.btnActualizar.TabIndex = 21;
+            this.btnActualizar.Tag = "Actualizar x";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnEliminar.IconColor = System.Drawing.Color.White;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 26;
+            this.btnEliminar.Location = new System.Drawing.Point(206, 8);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(32, 32);
+            this.btnEliminar.TabIndex = 23;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel2.Controls.Add(this.dgvComidas);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(12);
+            this.panel2.Size = new System.Drawing.Size(684, 311);
+            this.panel2.TabIndex = 40;
             // 
             // FrmComidasDeOrdenCatalogo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 479);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.dgvComidas);
+            this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmComidasDeOrdenCatalogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Platos de la orden";
-            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvComidas)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvComidas;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        public FontAwesome.Sharp.IconButton btnEliminar;
+        public FontAwesome.Sharp.IconButton btnActualizar;
+        public FontAwesome.Sharp.IconButton btnAgregar;
+        private System.Windows.Forms.Panel panel2;
     }
 }
