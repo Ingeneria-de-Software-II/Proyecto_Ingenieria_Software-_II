@@ -117,6 +117,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.btnSeleccionarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSeleccionarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSeleccionarCliente.UseVisualStyleBackColor = false;
+            this.btnSeleccionarCliente.Click += new System.EventHandler(this.btnSeleccionarCliente_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -151,6 +152,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnActualizar
             // 
@@ -168,6 +170,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.btnActualizar.TabIndex = 21;
             this.btnActualizar.Tag = "Actualizar x";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 

@@ -121,5 +121,21 @@ namespace Sistema_Facturacion_Restaurantes.Forms
                 this.Dispose();
             }
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            dgvBebidas.DataSource = CBebida.Buscar(txtBuscar.Text);
+        }
+
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+            txtBuscar.Text = "";
+        }
+
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            txtBuscar.Text = "Ingrese el nombre";
+            dgvBebidas.DataSource = CBebida.MostrarBebida();
+        }
     }
 }

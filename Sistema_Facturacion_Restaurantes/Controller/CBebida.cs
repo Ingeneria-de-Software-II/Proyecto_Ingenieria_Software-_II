@@ -33,5 +33,10 @@ namespace Sistema_Facturacion_Restaurantes.Controller
             Obj.precio = Precio;
             return Obj.Actualizar(Obj);
         }
+
+        public static DataTable Buscar(string nombre)
+        {
+            return new DBebida().BuscarBebida(nombre);
+        }
     }
 }
