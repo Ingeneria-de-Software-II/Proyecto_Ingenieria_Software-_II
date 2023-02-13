@@ -31,8 +31,6 @@ namespace Sistema_Facturacion_Restaurantes.Forms
         {
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Panel();
-            this.btnSeleccionarCliente = new System.Windows.Forms.FlowLayoutPanel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
@@ -40,7 +38,6 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.btnAgregar.SuspendLayout();
-            this.btnSeleccionarCliente.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,48 +63,12 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.MintCream;
             this.btnAgregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btnAgregar.Controls.Add(this.btnSeleccionarCliente);
             this.btnAgregar.Controls.Add(this.flowLayoutPanel1);
             this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgregar.Location = new System.Drawing.Point(0, 0);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(970, 60);
             this.btnAgregar.TabIndex = 39;
-            // 
-            // btnSeleccionarCliente
-            // 
-            this.btnSeleccionarCliente.Controls.Add(this.iconButton1);
-            this.btnSeleccionarCliente.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnSeleccionarCliente.Location = new System.Drawing.Point(250, 0);
-            this.btnSeleccionarCliente.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSeleccionarCliente.Name = "btnSeleccionarCliente";
-            this.btnSeleccionarCliente.Padding = new System.Windows.Forms.Padding(14, 14, 0, 14);
-            this.btnSeleccionarCliente.Size = new System.Drawing.Size(326, 58);
-            this.btnSeleccionarCliente.TabIndex = 25;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.AutoSize = true;
-            this.iconButton1.BackColor = System.Drawing.Color.MintCream;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CirclePlus;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 26;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(14, 14);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(130, 32);
-            this.iconButton1.TabIndex = 21;
-            this.iconButton1.Text = "Empleado";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.btnSeleccionarCliente_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -203,8 +164,6 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.Load += new System.EventHandler(this.FrmEmpleadoCatalogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.btnAgregar.ResumeLayout(false);
-            this.btnSeleccionarCliente.ResumeLayout(false);
-            this.btnSeleccionarCliente.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -215,8 +174,6 @@ namespace Sistema_Facturacion_Restaurantes.Forms
         #endregion
         private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.Panel btnAgregar;
-        private System.Windows.Forms.FlowLayoutPanel btnSeleccionarCliente;
-        public FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public FontAwesome.Sharp.IconButton iconButton2;
         public FontAwesome.Sharp.IconButton btnActualizar;

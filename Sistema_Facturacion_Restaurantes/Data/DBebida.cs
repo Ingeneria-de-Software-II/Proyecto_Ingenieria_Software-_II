@@ -151,6 +151,38 @@ namespace Sistema_Facturacion_Restaurantes.Data
             return rpta;
         }
 
+        public DataTable BuscarBebida(string nombre)
+        {
+            DataTable dtPlato = new DataTable("Bebida");
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexion.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Buscar_Bebida";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParDato = new SqlParameter();
+                ParDato.ParameterName = "@Dato";
+                ParDato.SqlDbType = SqlDbType.VarChar;
+                ParDato.Size = 20;
+                ParDato.Value = nombre;
+                SqlCmd.Parameters.Add(ParDato);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(dtPlato);
+
+            }
+            catch (Exception ex)
+            {
+                dtPlato = null;
+            }
+            return dtPlato;
+        }
+
         public string Eliminar(DBebida bebida)
         {
             string rpta = "";
@@ -168,7 +200,7 @@ namespace Sistema_Facturacion_Restaurantes.Data
 
                 // Parámetros del Procedimiento Almacenado
                 SqlParameter BebidaID = new SqlParameter();
-                BebidaID.ParameterName = "@BebidaID"; 
+                BebidaID.ParameterName = "@BebidaID";
                 BebidaID.SqlDbType = SqlDbType.Int;
                 BebidaID.Value = bebida.BebidaID;
                 SqlCmd.Parameters.Add(BebidaID);
@@ -187,14 +219,8 @@ namespace Sistema_Facturacion_Restaurantes.Data
             }
             return rpta;
         }
-
-
-
-
-
-
     }
 
-   
+
 
 }

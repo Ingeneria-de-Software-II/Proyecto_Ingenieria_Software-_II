@@ -36,7 +36,13 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
-            this.btnEliminar = new FontAwesome.Sharp.IconButton();
+
+            //this.btnEliminar = new FontAwesome.Sharp.IconButton();
+
+            //this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            //this.label10 = new System.Windows.Forms.Label();
+            //this.cmbSucursal = new System.Windows.Forms.ComboBox();
+
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.pnlAcciones.SuspendLayout();
@@ -77,13 +83,18 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.iconButton1);
             this.flowLayoutPanel2.Controls.Add(this.btnComida);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(1122, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(21, 17, 0, 17);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(597, 71);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(601, 0);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(16, 14, 0, 14);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(240, 58);
             this.flowLayoutPanel2.TabIndex = 25;
             // 
             // iconButton1
@@ -101,6 +112,8 @@
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.Location = new System.Drawing.Point(426, 17);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.iconButton1.Location = new System.Drawing.Point(128, 14);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(145, 41);
             this.iconButton1.TabIndex = 21;
@@ -125,6 +138,8 @@
             this.btnComida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComida.Location = new System.Drawing.Point(277, 17);
             this.btnComida.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnComida.Location = new System.Drawing.Point(33, 14);
+            this.btnComida.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.btnComida.Name = "btnComida";
             this.btnComida.Size = new System.Drawing.Size(144, 41);
             this.btnComida.TabIndex = 22;
@@ -138,13 +153,18 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnAgregar);
             this.flowLayoutPanel1.Controls.Add(this.btnActualizar);
-            this.flowLayoutPanel1.Controls.Add(this.btnEliminar);
+            //this.flowLayoutPanel1.Controls.Add(this.btnEliminar);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(21, 17, 21, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(333, 71);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(322, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(16, 14, 16, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(279, 58);
             this.flowLayoutPanel1.TabIndex = 24;
             // 
             // btnAgregar
@@ -188,8 +208,19 @@
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // btnEliminar
+            // flowLayoutPanel3
             // 
+            /*this.flowLayoutPanel3.Controls.Add(this.label10);
+            this.flowLayoutPanel3.Controls.Add(this.cmbSucursal);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(16, 16, 16, 0);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(322, 58);
+            this.flowLayoutPanel3.TabIndex = 26;
+            // 
+
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -204,6 +235,22 @@
             this.btnEliminar.TabIndex = 23;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.label10.Location = new System.Drawing.Point(16, 16);
+            this.label10.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 19);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Sucursal:";*/
+            // 
+            // cmbSucursal
+            // 
+
             // 
             // panel2
             // 
@@ -215,6 +262,10 @@
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(21, 20, 21, 20);
             this.panel2.Size = new System.Drawing.Size(1721, 691);
+            this.panel2.Location = new System.Drawing.Point(0, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(16);
+            this.panel2.Size = new System.Drawing.Size(1291, 561);
             this.panel2.TabIndex = 43;
             // 
             // FrmOrdenCatalogo
@@ -250,7 +301,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public FontAwesome.Sharp.IconButton btnAgregar;
         public FontAwesome.Sharp.IconButton btnActualizar;
-        public FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.Panel panel2;
     }
 }

@@ -22,6 +22,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 
             rol = RolUsuario;
 
+
             InitializeComponent();
             switch (rol)
             {
@@ -50,7 +51,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 
             this.dgvPlatos.DataSource = CPlato.MostrarPlato();
             this.dgvPlatos.Columns[0].Visible = false;
-        }  
+        }
 
         private void FormCustomers_Load(object sender, EventArgs e)
         {
@@ -154,7 +155,25 @@ namespace Sistema_Facturacion_Restaurantes.Forms
                 rpta = CPlato.Eliminar(OrdenID);
                 dgvPlatos.DataSource = CPlato.MostrarPlato();
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            dgvPlatos.DataSource = CPlato.Buscar(txtBuscar.Text);
 
         }
+
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+
+            txtBuscar.Text = "";
+        }
+
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            txtBuscar.Text = "Ingrese el nombre";
+            dgvPlatos.DataSource = CPlato.MostrarPlato();
+        }
     }
+
 }

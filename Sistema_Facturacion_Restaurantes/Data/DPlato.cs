@@ -93,6 +93,8 @@ namespace Sistema_Facturacion_Restaurantes.Data
                 //Ejecutamos nuestro comando
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
 
+                SqlCon.Close();
+
             }
             catch (Exception ex)
             {
@@ -169,6 +171,38 @@ namespace Sistema_Facturacion_Restaurantes.Data
             return rpta;
         }
 
+        public DataTable BuscarPlato(string nombre)
+        {
+            DataTable dtPlato = new DataTable("Platos");
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexion.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Buscar_Plato";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParDato = new SqlParameter();
+                ParDato.ParameterName = "@Dato";
+                ParDato.SqlDbType = SqlDbType.VarChar;
+                ParDato.Size = 20;
+                ParDato.Value = nombre;
+                SqlCmd.Parameters.Add(ParDato);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(dtPlato);
+
+            }
+            catch (Exception ex)
+            {
+                dtPlato = null;
+            }
+            return dtPlato;
+        }
+
         public string Eliminar(DPlato plato)
         {
             string rpta = "";
@@ -205,7 +239,6 @@ namespace Sistema_Facturacion_Restaurantes.Data
             }
             return rpta;
         }
-
 
 
     }

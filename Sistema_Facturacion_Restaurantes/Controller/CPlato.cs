@@ -43,6 +43,10 @@ namespace Sistema_Facturacion_Restaurantes.Controller
             return Obj.Eliminar(Obj);
         }
 
+        public static DataTable Buscar(string nombre)
+        {
+            return new DPlato().BuscarPlato(nombre);
+        }
 
     }
 }

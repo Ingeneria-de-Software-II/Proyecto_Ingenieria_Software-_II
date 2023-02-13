@@ -37,11 +37,15 @@
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBebidas)).BeginInit();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvBebidas
@@ -63,6 +67,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.MintCream;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.flowLayoutPanel3);
             this.panel2.Controls.Add(this.flowLayoutPanel2);
             this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -75,9 +80,9 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.btnAgregarAOrden);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(1111, 0);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(250, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(21, 17, 0, 17);
@@ -107,19 +112,6 @@
             this.btnAgregarAOrden.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarAOrden.UseVisualStyleBackColor = false;
             this.btnAgregarAOrden.Click += new System.EventHandler(this.btnAgregarAOrden_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnAgregar);
-            this.flowLayoutPanel1.Controls.Add(this.btnActualizar);
-            this.flowLayoutPanel1.Controls.Add(this.btnEliminar);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(21, 17, 21, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(333, 71);
-            this.flowLayoutPanel1.TabIndex = 24;
             // 
             // btnAgregar
             // 
@@ -191,6 +183,56 @@
             this.panel1.Size = new System.Drawing.Size(1417, 766);
             this.panel1.TabIndex = 40;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MintCream;
+            this.panel1.Controls.Add(this.dgvBebidas);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 60);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(16, 16, 16, 0);
+            this.panel1.Size = new System.Drawing.Size(1063, 622);
+            this.panel1.TabIndex = 40;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.txtBuscar);
+            this.flowLayoutPanel3.Controls.Add(this.label1);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(640, 0);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(16, 14, 20, 14);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(421, 58);
+            this.flowLayoutPanel3.TabIndex = 27;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(220)))), ((int)(((byte)(201)))));
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(183, 14);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(0);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(202, 23);
+            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.Text = "Ingrese el nombre";
+            //this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            //this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
+            //this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.label1.Location = new System.Drawing.Point(130, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Buscar";
+            // 
             // formBebidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -209,6 +251,8 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -223,5 +267,8 @@
         public FontAwesome.Sharp.IconButton btnActualizar;
         public FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label label1;
     }
 }

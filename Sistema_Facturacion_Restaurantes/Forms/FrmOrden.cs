@@ -48,19 +48,8 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 
         }
 
-        private void rbtnCredito_CheckedChanged(object sender, EventArgs e)
-        {
-            FrmOrden c = new FrmOrden(SucursalID,rol);
-            if(rbtnCredito.Checked)
-            {
-                FrmClienteCatalogo cc = new FrmClienteCatalogo(rol,this);
-                // Le indicamos a VS que cc va a formar de este form (FrmOrden) desde donde lo instanciamos
-                // es decir que cc sera hijo de FrmOrden
-                this.AddOwnedForm(cc);
-                cc.Show();
-            }
-        }
 
+        //Eventos de Botones
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -101,7 +90,15 @@ namespace Sistema_Facturacion_Restaurantes.Forms
                 this.Dispose();
             }
         }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            cancelado = true;
+            this.Dispose();
+        }
 
+
+
+        //Eventos de Combobox
         private void rbtnContado_CheckedChanged(object sender, EventArgs e)
         {
             // Establecemos 0 porque solo registramos los clientes que pagan con tarjeta, entonces 0 significa que se pago en efectivo
@@ -109,6 +106,18 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             // decir que la orden se pago al contado
             if (rbtnContado.Checked)
                 ClienteID = 0;
+        }
+        private void rbtnCredito_CheckedChanged(object sender, EventArgs e)
+        {
+            FrmOrden c = new FrmOrden(SucursalID, rol);
+            if (rbtnCredito.Checked)
+            {
+                FrmClienteCatalogo cc = new FrmClienteCatalogo(rol, this);
+                // Le indicamos a VS que cc va a formar de este form (FrmOrden) desde donde lo instanciamos
+                // es decir que cc sera hijo de FrmOrden
+                this.AddOwnedForm(cc);
+                cc.Show();
+            }
         }
 
         public void fillSpaces(int MeseroID, int MesaID, int ClienteID, string FechaRealizacion)
@@ -122,10 +131,6 @@ namespace Sistema_Facturacion_Restaurantes.Forms
         }
         
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            cancelado = true;
-            this.Dispose();
-        }
+        
     }
 }
