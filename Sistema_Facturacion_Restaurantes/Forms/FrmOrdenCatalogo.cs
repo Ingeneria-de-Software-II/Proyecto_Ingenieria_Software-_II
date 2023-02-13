@@ -144,19 +144,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvOrdenes.Rows.Count == 0 || dgvOrdenes.CurrentCell == null)
-            {
-                MessageBox.Show("Para Eliminar un registro debe seleccionar una fila");
-                return;
-            }
 
-            if (MessageBox.Show("¿Estás seguro de que deseas eliminar este registro importante?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                int OrdenID = (int)this.dgvOrdenes.CurrentRow.Cells[0].Value;
-                rpta = COrden.Eliminar(OrdenID);
-                dgvOrdenes.DataSource = CComboxes.CargarOrden(1);
-            }
-            
         }
     }
 }

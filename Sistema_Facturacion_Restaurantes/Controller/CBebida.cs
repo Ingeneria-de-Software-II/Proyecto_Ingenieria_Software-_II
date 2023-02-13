@@ -43,7 +43,7 @@ namespace Sistema_Facturacion_Restaurantes.Controller
 
         public static DataTable Buscar(string nombre)
         {
-            return new DBebida().BuscarBebida(nombre);
+            return new DBebida().Buscar(nombre);
         }
     }
 }

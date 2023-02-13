@@ -36,14 +36,8 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
-
-            //this.btnEliminar = new FontAwesome.Sharp.IconButton();
-
-            //this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            //this.label10 = new System.Windows.Forms.Label();
-            //this.cmbSucursal = new System.Windows.Forms.ComboBox();
-
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.pnlAcciones.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -59,11 +53,10 @@
             this.dgvOrdenes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrdenes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvOrdenes.Location = new System.Drawing.Point(21, 20);
-            this.dgvOrdenes.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvOrdenes.Location = new System.Drawing.Point(12, 13);
             this.dgvOrdenes.Name = "dgvOrdenes";
             this.dgvOrdenes.RowHeadersWidth = 51;
-            this.dgvOrdenes.Size = new System.Drawing.Size(1679, 651);
+            this.dgvOrdenes.Size = new System.Drawing.Size(1267, 535);
             this.dgvOrdenes.TabIndex = 27;
             // 
             // pnlAcciones
@@ -74,9 +67,8 @@
             this.pnlAcciones.Controls.Add(this.flowLayoutPanel1);
             this.pnlAcciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAcciones.Location = new System.Drawing.Point(0, 0);
-            this.pnlAcciones.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(1721, 73);
+            this.pnlAcciones.Size = new System.Drawing.Size(1291, 60);
             this.pnlAcciones.TabIndex = 44;
             // 
             // flowLayoutPanel2
@@ -85,16 +77,11 @@
             this.flowLayoutPanel2.Controls.Add(this.btnComida);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(1122, 0);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(246, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(21, 17, 0, 17);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(597, 71);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(601, 0);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(16, 14, 0, 14);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(240, 58);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(12, 11, 0, 11);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(275, 58);
             this.flowLayoutPanel2.TabIndex = 25;
             // 
             // iconButton1
@@ -110,12 +97,10 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 26;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(426, 17);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.iconButton1.Location = new System.Drawing.Point(128, 14);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.iconButton1.Location = new System.Drawing.Point(151, 11);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(145, 41);
+            this.iconButton1.Size = new System.Drawing.Size(109, 33);
             this.iconButton1.TabIndex = 21;
             this.iconButton1.Text = "Bebidas";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -136,12 +121,10 @@
             this.btnComida.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnComida.IconSize = 26;
             this.btnComida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComida.Location = new System.Drawing.Point(277, 17);
-            this.btnComida.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnComida.Location = new System.Drawing.Point(33, 14);
-            this.btnComida.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.btnComida.Location = new System.Drawing.Point(40, 11);
+            this.btnComida.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnComida.Name = "btnComida";
-            this.btnComida.Size = new System.Drawing.Size(144, 41);
+            this.btnComida.Size = new System.Drawing.Size(108, 33);
             this.btnComida.TabIndex = 22;
             this.btnComida.Text = "Comida";
             this.btnComida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,18 +136,12 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnAgregar);
             this.flowLayoutPanel1.Controls.Add(this.btnActualizar);
-            //this.flowLayoutPanel1.Controls.Add(this.btnEliminar);
+            this.flowLayoutPanel1.Controls.Add(this.btnEliminar);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(21, 17, 21, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(333, 71);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(322, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(16, 14, 16, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(279, 58);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(12, 11, 12, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(246, 58);
             this.flowLayoutPanel1.TabIndex = 24;
             // 
             // btnAgregar
@@ -180,10 +157,10 @@
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 26;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(21, 17);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 11);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(173, 41);
+            this.btnAgregar.Size = new System.Drawing.Size(130, 33);
             this.btnAgregar.TabIndex = 20;
             this.btnAgregar.Text = "Nueva Orden";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -199,28 +176,28 @@
             this.btnActualizar.IconColor = System.Drawing.Color.White;
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 26;
-            this.btnActualizar.Location = new System.Drawing.Point(204, 17);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnActualizar.Location = new System.Drawing.Point(150, 11);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(43, 39);
+            this.btnActualizar.Size = new System.Drawing.Size(32, 32);
             this.btnActualizar.TabIndex = 21;
             this.btnActualizar.Tag = "Actualizar x";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // flowLayoutPanel3
+            // panel2
             // 
-            /*this.flowLayoutPanel3.Controls.Add(this.label10);
-            this.flowLayoutPanel3.Controls.Add(this.cmbSucursal);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(16, 16, 16, 0);
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(322, 58);
-            this.flowLayoutPanel3.TabIndex = 26;
+            this.panel2.BackColor = System.Drawing.Color.MintCream;
+            this.panel2.Controls.Add(this.dgvOrdenes);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(12, 13, 12, 13);
+            this.panel2.Size = new System.Drawing.Size(1291, 561);
+            this.panel2.TabIndex = 43;
             // 
-
+            // btnEliminar
+            // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -228,54 +205,21 @@
             this.btnEliminar.IconColor = System.Drawing.Color.White;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 26;
-            this.btnEliminar.Location = new System.Drawing.Point(257, 17);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnEliminar.Location = new System.Drawing.Point(189, 11);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(43, 39);
-            this.btnEliminar.TabIndex = 23;
+            this.btnEliminar.Size = new System.Drawing.Size(32, 32);
+            this.btnEliminar.TabIndex = 24;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.label10.Location = new System.Drawing.Point(16, 16);
-            this.label10.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 19);
-            this.label10.TabIndex = 40;
-            this.label10.Text = "Sucursal:";*/
-            // 
-            // cmbSucursal
-            // 
-
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.MintCream;
-            this.panel2.Controls.Add(this.dgvOrdenes);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 73);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(21, 20, 21, 20);
-            this.panel2.Size = new System.Drawing.Size(1721, 691);
-            this.panel2.Location = new System.Drawing.Point(0, 60);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(16);
-            this.panel2.Size = new System.Drawing.Size(1291, 561);
-            this.panel2.TabIndex = 43;
             // 
             // FrmOrdenCatalogo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1721, 764);
+            this.ClientSize = new System.Drawing.Size(1291, 621);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlAcciones);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmOrdenCatalogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ordenes";
@@ -302,5 +246,6 @@
         public FontAwesome.Sharp.IconButton btnAgregar;
         public FontAwesome.Sharp.IconButton btnActualizar;
         private System.Windows.Forms.Panel panel2;
+        public FontAwesome.Sharp.IconButton btnEliminar;
     }
 }

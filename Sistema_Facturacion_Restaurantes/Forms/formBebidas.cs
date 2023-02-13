@@ -79,7 +79,21 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.dgvBebidas.DataSource = CBebida.MostrarBebida();
             this.dgvBebidas.Columns[0].Visible = false;
         }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvBebidas.Rows.Count == 0 || dgvBebidas.CurrentCell == null)
+            {
+                MessageBox.Show("Para Eliminar un registro debe seleccionar una fila");
+                return;
+            }
 
+            if (MessageBox.Show("¿Estás seguro de que deseas eliminar este registro importante?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                int BebidaID = (int)this.dgvBebidas.CurrentRow.Cells[0].Value;
+                rpta = CBebida.Eliminar(BebidaID);
+                dgvBebidas.DataSource = CBebida.MostrarBebida();
+            }
+        }
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             if (dgvBebidas.Rows.Count == 0 || dgvBebidas.CurrentCell.RowIndex < 0)
@@ -107,7 +121,6 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.dgvBebidas.DataSource = CBebida.MostrarBebida();
             this.dgvBebidas.Columns[0].Visible = false;
         }
-
         private void btnAgregarAOrden_Click(object sender, EventArgs e)
         {
             int BebidaID = (int)this.dgvBebidas.CurrentRow.Cells[0].Value;
@@ -122,38 +135,29 @@ namespace Sistema_Facturacion_Restaurantes.Forms
                 this.Dispose();
             }
         }
-
+        
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             dgvBebidas.DataSource = CBebida.Buscar(txtBuscar.Text);
+
         }
 
         private void txtBuscar_Enter(object sender, EventArgs e)
         {
-            txtBuscar.Text = "";
+            if (txtBuscar.Text == "Ingrese el nombre")
+                txtBuscar.Text = "";
         }
 
         private void txtBuscar_Leave(object sender, EventArgs e)
         {
-            txtBuscar.Text = "Ingrese el nombre";
-            dgvBebidas.DataSource = CBebida.MostrarBebida();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dgvBebidas.Rows.Count == 0 || dgvBebidas.CurrentCell == null)
+            if (txtBuscar.Text == string.Empty)
             {
-                MessageBox.Show("Para Eliminar un registro debe seleccionar una fila");
-                return;
-            }
-
-            if (MessageBox.Show("¿Estás seguro de que deseas eliminar este registro importante?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                int BebidaID = (int)this.dgvBebidas.CurrentRow.Cells[0].Value;
-                rpta = CBebida.Eliminar(BebidaID);
+                txtBuscar.Text = "Ingrese el nombre";
                 dgvBebidas.DataSource = CBebida.MostrarBebida();
             }
         }
+
+        
     }
 
     

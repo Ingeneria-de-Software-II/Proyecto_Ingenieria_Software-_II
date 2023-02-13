@@ -165,14 +165,17 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 
         private void txtBuscar_Enter(object sender, EventArgs e)
         {
-
+            if(txtBuscar.Text == "Ingrese el nombre")
             txtBuscar.Text = "";
         }
 
         private void txtBuscar_Leave(object sender, EventArgs e)
         {
-            txtBuscar.Text = "Ingrese el nombre";
-            dgvPlatos.DataSource = CPlato.MostrarPlato();
+            if(txtBuscar.Text == string.Empty)
+            {
+                txtBuscar.Text = "Ingrese el nombre";
+                dgvPlatos.DataSource = CPlato.MostrarPlato();
+            }
         }
     }
 

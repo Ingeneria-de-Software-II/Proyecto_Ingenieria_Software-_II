@@ -151,7 +151,7 @@ namespace Sistema_Facturacion_Restaurantes.Data
             return rpta;
         }
 
-        public DataTable BuscarBebida(string nombre)
+        public DataTable Buscar(string nombre)
         {
             DataTable dtPlato = new DataTable("Bebida");
             SqlConnection SqlCon = new SqlConnection();

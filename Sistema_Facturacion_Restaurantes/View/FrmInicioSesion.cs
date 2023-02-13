@@ -49,5 +49,35 @@ namespace Sistema_Facturacion_Restaurantes.View
             else
                 MessageBox.Show("No hay Conexión al Servidor", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if(txtUsuario.Text == "Usuario")
+                txtUsuario.Text = "";
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if(txtUsuario.Text == string.Empty)
+                txtUsuario.Text = "Usuario";
+        }
+
+        private void txtContraseña_Enter(object sender, EventArgs e)
+        {
+            if(txtContraseña.Text == "Contraseña")
+            {
+                txtContraseña.PasswordChar = '*';
+                txtContraseña.Text = "";
+            }
+        }
+
+        private void txtContraseña_Leave(object sender, EventArgs e)
+        {
+            if(txtContraseña.Text == string.Empty)
+            {
+                txtContraseña.PasswordChar = '\0';
+                txtContraseña.Text = "Contraseña";
+            }
+        }
     }
 }
