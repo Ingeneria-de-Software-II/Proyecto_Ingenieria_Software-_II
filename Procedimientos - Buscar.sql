@@ -13,7 +13,7 @@ Select
  where Nombre like @Dato + '%' 
 GO
 
-Alter procedure [dbo].[Buscar_Bebida] @Dato varchar(20)
+Create procedure [dbo].[Buscar_Bebida] @Dato varchar(20)
 as
 	Select 
 		B.Nombre,

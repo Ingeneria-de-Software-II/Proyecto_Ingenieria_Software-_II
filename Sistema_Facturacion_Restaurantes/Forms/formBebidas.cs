@@ -154,10 +154,24 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             {
                 txtBuscar.Text = "Ingrese el nombre";
                 dgvBebidas.DataSource = CBebida.MostrarBebida();
+                this.dgvBebidas.Columns[0].Visible = false;
             }
         }
 
-        
+        private void btnAgregarPlatoAOrden_Click(object sender, EventArgs e)
+        {
+            int PlatoID = (int)this.dgvBebidas.CurrentRow.Cells[0].Value;
+            string Nombre = Convert.ToString(this.dgvBebidas.CurrentRow.Cells[1].Value);
+
+            if (AgregarBebidaAOrden)
+            {
+                FrmBebidaDeOrden co = Owner as FrmBebidaDeOrden;
+                co.BebidaID = PlatoID;
+                co.txtBebida.Text = Nombre;
+                AgregarBebidaAOrden = false;
+                this.Dispose();
+            }
+        }
     }
 
     

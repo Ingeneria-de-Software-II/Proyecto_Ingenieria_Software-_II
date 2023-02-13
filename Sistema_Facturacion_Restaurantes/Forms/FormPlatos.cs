@@ -154,12 +154,14 @@ namespace Sistema_Facturacion_Restaurantes.Forms
                 int OrdenID = (int)this.dgvPlatos.CurrentRow.Cells[0].Value;
                 rpta = CPlato.Eliminar(OrdenID);
                 dgvPlatos.DataSource = CPlato.MostrarPlato();
+                this.dgvPlatos.Columns[0].Visible = false;
             }
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             dgvPlatos.DataSource = CPlato.Buscar(txtBuscar.Text);
+            this.dgvPlatos.Columns[0].Visible = false;
 
         }
 
@@ -175,6 +177,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             {
                 txtBuscar.Text = "Ingrese el nombre";
                 dgvPlatos.DataSource = CPlato.MostrarPlato();
+                this.dgvPlatos.Columns[0].Visible = false;
             }
         }
     }
