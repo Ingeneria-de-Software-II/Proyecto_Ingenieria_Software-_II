@@ -13,27 +13,29 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 {
     public partial class FrmOrdenCatalogo : System.Windows.Forms.Form
     {
-        int SucursalID;
+        int SucursalId;
         String rol;
+        string rpta;
         public FrmOrdenCatalogo(String rolUsuario)
         {
             rol = rolUsuario; 
             InitializeComponent();
             // Cargar el cmb comodin Sucursal
-            Dictionary<int, string> Sucursales = new Dictionary<int, string>();
+            /*Dictionary<int, string> Sucursales = new Dictionary<int, string>();
 
             foreach (DataRow row in CComboxes.CargarSucursal().Rows)
             {
                 Sucursales.Add((int)row[1], (string)row[0]);
-            }
-            this.cmbSucursal.DataSource = new BindingSource(Sucursales, null);
-            this.cmbSucursal.DisplayMember = "Value";
-            this.cmbSucursal.ValueMember = "Key";
+            }*/
+            //this.cmbSucursal.DataSource = new BindingSource(Sucursales, null);
+            //this.cmbSucursal.DisplayMember = "Value";
+            //this.cmbSucursal.ValueMember = "Key";
 
             // Get combobox selection (in handler)
-            SucursalID = ((KeyValuePair<int, string>)this.cmbSucursal.SelectedItem).Key;
+            // = ((KeyValuePair<int, string>)this.cmbSucursal.SelectedItem).Key;
             // Cargar las ordenes de la sucursar selecionada
-            dgvOrdenes.DataSource = CComboxes.CargarOrden(SucursalID);
+            dgvOrdenes.DataSource = CComboxes.CargarOrden(1);
+            dgvOrdenes.Columns[0].Visible = true;
         }
 
         private void FormOrders_Load(object sender, EventArgs e)
@@ -59,30 +61,26 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 
         private void cmbSucursal_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Update SucursalID var
-            SucursalID = ((KeyValuePair<int, string>)this.cmbSucursal.SelectedItem).Key;
+            // Update 1 var
+            //1 = ((KeyValuePair<int, string>)this.cmbSucursal.SelectedItem).Key;
             // Cargar las ordenes de la sucursar selecionada
-            dgvOrdenes.DataSource = CComboxes.CargarOrden(SucursalID);
-            this.dgvOrdenes.Columns[0].Visible = false;
+            //dgvOrdenes.DataSource = CComboxes.CargarOrden(1);
+            //this.dgvOrdenes.Columns[0].Visible = false;
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FrmOrden o = new FrmOrden(SucursalID,rol);
+            FrmOrden o = new FrmOrden(1,rol);
             o.isUpdate = false;
             o.ShowDialog();
+            dgvOrdenes.DataSource = CComboxes.CargarOrden(1);
 
-            if (!o.cancelado)
-            {
-                dgvOrdenes.DataSource = CComboxes.CargarOrden(SucursalID);
-                this.dgvOrdenes.Columns[0].Visible = false;
-            }
-            
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             
-            if (dgvOrdenes.Rows.Count == 0 || dgvOrdenes.CurrentCell.RowIndex < 0)
+            if (dgvOrdenes.Rows.Count == 0 || dgvOrdenes.CurrentCell == null)
             {
                 MessageBox.Show("Para actualizar un registro debe seleccionar una fila");
                 return;
@@ -91,7 +89,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             // Respaldo de los datos iniciales
             int OrdenID = (int)this.dgvOrdenes.CurrentRow.Cells[0].Value;
 
-            DataRow[] SelectedRow = CComboxes.MostrarOrdenForeignKey(SucursalID).Select("OrdenID = " + OrdenID);
+            DataRow[] SelectedRow = CComboxes.MostrarOrdenForeignKey(1).Select("OrdenID = " + OrdenID);
 
             int MeseroID = (int)SelectedRow[0][1];
             int MesaID = (int)SelectedRow[0][2];
@@ -99,16 +97,12 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             string FechaRealizacion = Convert.ToString(this.dgvOrdenes.CurrentRow.Cells[4].Value);
 
             // Llamada al form que contine los datos de entrada del 'objeto' Sucursal
-            FrmOrden frmOrden = new FrmOrden(SucursalID, rol);
+            FrmOrden frmOrden = new FrmOrden(1, rol);
             frmOrden.isUpdate = true;
             frmOrden.fillSpaces(MeseroID, MesaID, ClienteID, FechaRealizacion);
             frmOrden.EditableOrdenID = OrdenID;
             frmOrden.ShowDialog();
-            if (!frmOrden.cancelado)
-            {
-                this.dgvOrdenes.DataSource = CComboxes.CargarOrden(SucursalID);
-                this.dgvOrdenes.Columns[0].Visible = false;
-            }
+            dgvOrdenes.DataSource = CComboxes.CargarOrden(1);
 
         }
 
@@ -126,8 +120,8 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             FrmComidasDeOrdenCatalogo co = new FrmComidasDeOrdenCatalogo(OrdenID,rol);
             co.ShowDialog();
 
-            dgvOrdenes.DataSource = CComboxes.CargarOrden(SucursalID);
-            dgvOrdenes.Columns[0].Visible = false;
+            dgvOrdenes.DataSource = CComboxes.CargarOrden(1);
+            //dgvOrdenes.Columns[0].Visible = false;
         }
 
         private void btnBebidas_Click(object sender, EventArgs e)
@@ -144,8 +138,25 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             FrmBebidaDeOrdenCatalogo co = new FrmBebidaDeOrdenCatalogo(OrdenID);
             co.ShowDialog();
 
-            dgvOrdenes.DataSource = CComboxes.CargarOrden(SucursalID);
-            this.dgvOrdenes.Columns[0].Visible = false;
+            dgvOrdenes.DataSource = CComboxes.CargarOrden(1);
+          
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvOrdenes.Rows.Count == 0 || dgvOrdenes.CurrentCell == null)
+            {
+                MessageBox.Show("Para Eliminar un registro debe seleccionar una fila");
+                return;
+            }
+
+            if (MessageBox.Show("¿Estás seguro de que deseas eliminar este registro importante?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                int OrdenID = (int)this.dgvOrdenes.CurrentRow.Cells[0].Value;
+                rpta = COrden.Eliminar(OrdenID);
+                dgvOrdenes.DataSource = CComboxes.CargarOrden(1);
+            }
+            
         }
     }
 }

@@ -33,5 +33,11 @@ namespace Sistema_Facturacion_Restaurantes.Controller
             Obj.precio = Precio;
             return Obj.Actualizar(Obj);
         }
+        public static string Eliminar(int BebidaID)
+        {
+            DBebida Obj = new DBebida();
+            Obj.bebidaID = BebidaID;
+            return Obj.Eliminar(Obj);
+        }
     }
 }

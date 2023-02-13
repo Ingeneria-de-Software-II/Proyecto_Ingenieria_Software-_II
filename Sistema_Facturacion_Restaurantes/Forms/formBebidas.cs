@@ -15,6 +15,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
     {
         public Boolean AgregarBebidaAOrden = false;
         string rol;
+        String rpta;
         public formBebidas(string rolU)
         {
             rol = rolU;
@@ -119,6 +120,22 @@ namespace Sistema_Facturacion_Restaurantes.Forms
                 co.txtBebida.Text = Nombre;
                 AgregarBebidaAOrden = false;
                 this.Dispose();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvBebidas.Rows.Count == 0 || dgvBebidas.CurrentCell == null)
+            {
+                MessageBox.Show("Para Eliminar un registro debe seleccionar una fila");
+                return;
+            }
+
+            if (MessageBox.Show("¿Estás seguro de que deseas eliminar este registro importante?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                int BebidaID = (int)this.dgvBebidas.CurrentRow.Cells[0].Value;
+                rpta = CBebida.Eliminar(BebidaID);
+                dgvBebidas.DataSource = CBebida.MostrarBebida();
             }
         }
     }

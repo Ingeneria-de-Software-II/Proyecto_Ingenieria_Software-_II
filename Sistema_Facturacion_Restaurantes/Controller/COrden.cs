@@ -29,5 +29,13 @@ namespace Sistema_Facturacion_Restaurantes.Controller
             Obj.fechaRealizacion = FechaRealizacion;
             return Obj.Actualizar(Obj);
         }
+
+        public static string Eliminar(int OrdenID)
+        {
+            DOrden Obj = new DOrden();
+            Obj.ordenID = OrdenID;
+            return Obj.Eliminar(Obj);
+        }
+
     }
 }

@@ -31,12 +31,12 @@
             this.dgvBebidas = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnAgregarAOrden = new FontAwesome.Sharp.IconButton();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBebidas)).BeginInit();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -52,10 +52,11 @@
             this.dgvBebidas.BackgroundColor = System.Drawing.Color.MintCream;
             this.dgvBebidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBebidas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBebidas.Location = new System.Drawing.Point(16, 16);
+            this.dgvBebidas.Location = new System.Drawing.Point(21, 20);
+            this.dgvBebidas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvBebidas.Name = "dgvBebidas";
             this.dgvBebidas.RowHeadersWidth = 51;
-            this.dgvBebidas.Size = new System.Drawing.Size(1031, 606);
+            this.dgvBebidas.Size = new System.Drawing.Size(1375, 746);
             this.dgvBebidas.TabIndex = 33;
             // 
             // panel2
@@ -66,8 +67,9 @@
             this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1063, 60);
+            this.panel2.Size = new System.Drawing.Size(1417, 73);
             this.panel2.TabIndex = 39;
             // 
             // flowLayoutPanel2
@@ -75,35 +77,12 @@
             this.flowLayoutPanel2.Controls.Add(this.btnAgregarAOrden);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(833, 0);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(1111, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(16, 14, 0, 14);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(228, 58);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(21, 17, 0, 17);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(304, 71);
             this.flowLayoutPanel2.TabIndex = 25;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnAgregar);
-            this.flowLayoutPanel1.Controls.Add(this.btnActualizar);
-            this.flowLayoutPanel1.Controls.Add(this.btnEliminar);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(16, 14, 16, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 58);
-            this.flowLayoutPanel1.TabIndex = 24;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.MintCream;
-            this.panel1.Controls.Add(this.dgvBebidas);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 60);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(16, 16, 16, 0);
-            this.panel1.Size = new System.Drawing.Size(1063, 622);
-            this.panel1.TabIndex = 40;
             // 
             // btnAgregarAOrden
             // 
@@ -118,16 +97,29 @@
             this.btnAgregarAOrden.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarAOrden.IconSize = 26;
             this.btnAgregarAOrden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarAOrden.Location = new System.Drawing.Point(72, 14);
-            this.btnAgregarAOrden.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.btnAgregarAOrden.Location = new System.Drawing.Point(55, 17);
+            this.btnAgregarAOrden.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnAgregarAOrden.Name = "btnAgregarAOrden";
-            this.btnAgregarAOrden.Size = new System.Drawing.Size(136, 32);
+            this.btnAgregarAOrden.Size = new System.Drawing.Size(223, 41);
             this.btnAgregarAOrden.TabIndex = 22;
             this.btnAgregarAOrden.Text = "Agregar Orden";
             this.btnAgregarAOrden.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarAOrden.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarAOrden.UseVisualStyleBackColor = false;
             this.btnAgregarAOrden.Click += new System.EventHandler(this.btnAgregarAOrden_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnAgregar);
+            this.flowLayoutPanel1.Controls.Add(this.btnActualizar);
+            this.flowLayoutPanel1.Controls.Add(this.btnEliminar);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(21, 17, 21, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(333, 71);
+            this.flowLayoutPanel1.TabIndex = 24;
             // 
             // btnAgregar
             // 
@@ -142,10 +134,10 @@
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 26;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(16, 14);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.btnAgregar.Location = new System.Drawing.Point(21, 17);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(130, 32);
+            this.btnAgregar.Size = new System.Drawing.Size(175, 41);
             this.btnAgregar.TabIndex = 20;
             this.btnAgregar.Text = "Nueva Bebida";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,10 +153,10 @@
             this.btnActualizar.IconColor = System.Drawing.Color.White;
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 26;
-            this.btnActualizar.Location = new System.Drawing.Point(154, 14);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnActualizar.Location = new System.Drawing.Point(206, 17);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(32, 32);
+            this.btnActualizar.Size = new System.Drawing.Size(43, 39);
             this.btnActualizar.TabIndex = 21;
             this.btnActualizar.Tag = "Actualizar x";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -179,20 +171,34 @@
             this.btnEliminar.IconColor = System.Drawing.Color.White;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 26;
-            this.btnEliminar.Location = new System.Drawing.Point(194, 14);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnEliminar.Location = new System.Drawing.Point(259, 17);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(32, 32);
+            this.btnEliminar.Size = new System.Drawing.Size(43, 39);
             this.btnEliminar.TabIndex = 23;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MintCream;
+            this.panel1.Controls.Add(this.dgvBebidas);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 73);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(21, 20, 21, 0);
+            this.panel1.Size = new System.Drawing.Size(1417, 766);
+            this.panel1.TabIndex = 40;
             // 
             // formBebidas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1063, 682);
+            this.ClientSize = new System.Drawing.Size(1417, 839);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formBebidas";
             this.Text = "Bebidas";
             this.Load += new System.EventHandler(this.FormReporting_Load);

@@ -14,6 +14,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
     public partial class FormPlatos : System.Windows.Forms.Form
     {
         String rol;
+        String rpta;
 
         public Boolean AgregarPlatoAOrden = false;
         public FormPlatos(string RolUsuario)
@@ -83,12 +84,11 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (dgvPlatos.Rows.Count == 0 || dgvPlatos.CurrentCell.RowIndex < 0)
+            if (dgvPlatos.Rows.Count == 0 || dgvPlatos.CurrentCell == null)
             {
-                MessageBox.Show("Para actualizar un registro debe seleccionar una fila");
+                MessageBox.Show("Para Actualizar un registro debe seleccionar una fila");
                 return;
             }
-
             // Respaldo de los datos iniciales
             int PlatoID = (int)this.dgvPlatos.CurrentRow.Cells[0].Value;
             string Nombre = Convert.ToString(this.dgvPlatos.CurrentRow.Cells[1].Value);
@@ -128,6 +128,32 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            int PlatoID = (int)this.dgvPlatos.CurrentRow.Cells[0].Value;
+
+            //FrmPlatoIngredientesCatalogo pic = new FrmPlatoIngredientesCatalogo(PlatoID);
+            FrmPlatoIngredientesCatalogo pic = new FrmPlatoIngredientesCatalogo(PlatoID, rol);
+            pic.ShowDialog();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvPlatos.Rows.Count == 0 || dgvPlatos.CurrentCell == null)
+            {
+                MessageBox.Show("Para Eliminar un registro debe seleccionar una fila");
+                return;
+            }
+
+            if (MessageBox.Show("¿Estás seguro de que deseas eliminar este registro importante?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                int OrdenID = (int)this.dgvPlatos.CurrentRow.Cells[0].Value;
+                rpta = CPlato.Eliminar(OrdenID);
+                dgvPlatos.DataSource = CPlato.MostrarPlato();
+            }
 
         }
     }

@@ -35,5 +35,14 @@ namespace Sistema_Facturacion_Restaurantes.Controller
             Obj.precio = Precio;
             return Obj.Actualizar(Obj);
         }
+
+        public static string Eliminar(int PlatoID)
+        {
+            DPlato Obj = new DPlato();
+            Obj.platoID = PlatoID;
+            return Obj.Eliminar(Obj);
+        }
+
+
     }
 }

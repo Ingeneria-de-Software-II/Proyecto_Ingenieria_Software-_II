@@ -28,7 +28,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             // Cargar los meseros que tragajan en la sucursal seleccionada
             Dictionary<int, string> Meseros = new Dictionary<int, string>();
 
-            foreach (DataRow row in CComboxes.CargarMesero(SucursalID).Rows)
+            foreach (DataRow row in CComboxes.CargarMesero(1).Rows)
             {
                 Meseros.Add((int)row[1], (string)row[0]);
             }
@@ -38,7 +38,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             // Cargar las mesas de la sucursar selecionada
             Dictionary<int, string> Mesas = new Dictionary<int, string>();
 
-            foreach (DataRow row in CComboxes.CargarMesas(SucursalID).Rows)
+            foreach (DataRow row in CComboxes.CargarMesas(1).Rows)
             {
                 Mesas.Add((int)row[1], (string)row[0]);
             }

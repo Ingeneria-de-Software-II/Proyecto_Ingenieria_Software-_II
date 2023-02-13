@@ -137,5 +137,46 @@ namespace Sistema_Facturacion_Restaurantes.Data
             }
             return rpta;
         }
+
+        public string Eliminar(DOrden orden)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "deleteOrden";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                // Parámetros del Procedimiento Almacenado
+                //ActualizarOrden @OrdenID int
+                SqlParameter OrdenID = new SqlParameter();
+                OrdenID.ParameterName = "OrdenID";
+                OrdenID.SqlDbType = SqlDbType.Int;
+                OrdenID.Value = orden.OrdenID;
+                SqlCmd.Parameters.Add(OrdenID);
+
+                //Ejecutamos nuestro comando
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+        }
+
+
+
     }
 }

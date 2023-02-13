@@ -26,8 +26,8 @@ namespace Sistema_Facturacion_Restaurantes.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-JBS2MU8\\PAVILION;Initial Catalog=Restaurantes;User ID=sa;Pass" +
-            "word=Ceavlaeb747.")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TV-236;Initial Catalog=Restaurantes;User ID=adminRestaurante;Password" +
+            "=password01")]
         public string RestaurantesConnectionString {
             get {
                 return ((string)(this["RestaurantesConnectionString"]));
