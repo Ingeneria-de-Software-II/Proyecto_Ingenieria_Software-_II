@@ -168,5 +168,48 @@ namespace Sistema_Facturacion_Restaurantes.Data
             }
             return rpta;
         }
+
+        public string Eliminar(DProveedor proveedor)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "eliminar_proveedor";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                // Parámetros del Procedimiento Almacenado
+                // Parámetros del Procedimiento Almacenado
+                SqlParameter ProveedorID = new SqlParameter();
+                ProveedorID.ParameterName = "@id_proveedor";
+                ProveedorID.SqlDbType = SqlDbType.Int;
+                ProveedorID.Value = proveedor.ProveedorID;
+                SqlCmd.Parameters.Add(ProveedorID);
+
+                //Ejecutamos nuestro comando
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+        }
+
+
+
+
+
     }
 }

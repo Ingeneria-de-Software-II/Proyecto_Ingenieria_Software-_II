@@ -14,6 +14,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
     public partial class FrmProveedorCatalogo : Form
     {
         public Boolean isInsumo = false;
+        String rpta;
         public FrmProveedorCatalogo()
         {
             InitializeComponent();
@@ -88,6 +89,22 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             frmProveedor.ShowDialog();
             this.dgvProveedor.DataSource = CProveedor.MostrarProveedor();
             this.dgvProveedor.Columns[0].Visible = false;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvProveedor.Rows.Count == 0 || dgvProveedor.CurrentCell == null)
+            {
+                MessageBox.Show("Para Eliminar un registro debe seleccionar una fila");
+                return;
+            }
+
+            if (MessageBox.Show("¿Estás seguro de que deseas eliminar este registro importante?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                int ProveedorID = (int)this.dgvProveedor.CurrentRow.Cells[0].Value;
+                rpta = CProveedor.Eliminar(ProveedorID);
+                dgvProveedor.DataSource = CProveedor.MostrarProveedor();
+            }
         }
     }
 }

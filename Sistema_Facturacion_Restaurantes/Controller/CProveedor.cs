@@ -35,5 +35,14 @@ namespace Sistema_Facturacion_Restaurantes.Controller
             Obj.direccion = Direccion;
             return Obj.Actualizar(Obj);
         }
+
+        public static string Eliminar(int ProveedorID)
+        {
+            DProveedor Obj = new DProveedor();
+            Obj.proveedorID = ProveedorID;
+            return Obj.Eliminar(Obj);
+        }
+
+
     }
 }

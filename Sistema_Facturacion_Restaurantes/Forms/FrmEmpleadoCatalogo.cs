@@ -13,7 +13,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
 {
     public partial class FrmEmpleadoCatalogo : Form
     {
-        private int SucursalID = 0;
+        private int SucursalID = 1;
         String rpta;
         public FrmEmpleadoCatalogo(int Sucursal)
         {
@@ -26,9 +26,9 @@ namespace Sistema_Facturacion_Restaurantes.Forms
         public FrmEmpleadoCatalogo()
         {
             InitializeComponent();
-            this.dgvEmpleados.DataSource = CEmpleado.showallEmploye();
+            this.dgvEmpleados.DataSource = CEmpleado.MostrarEmpleadoPorSucursal(1);
             this.dgvEmpleados.Columns[0].Visible = false;
-            this.dgvEmpleados.Columns[7].Visible = false;
+            //this.dgvEmpleados.Columns[7].Visible = false;
         }
 
         private void btnSeleccionarCliente_Click(object sender, EventArgs e)
@@ -142,6 +142,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
                 int EmpleadoID = (int)this.dgvEmpleados.CurrentRow.Cells[0].Value;
                 rpta = CEmpleado.Eliminar(EmpleadoID);
                 this.dgvEmpleados.DataSource = CEmpleado.MostrarEmpleadoPorSucursal(1);
+                this.dgvEmpleados.Columns[0].Visible = false;
             }
         }
     }

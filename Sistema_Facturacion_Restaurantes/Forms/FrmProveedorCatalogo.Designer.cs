@@ -53,10 +53,11 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.dgvProveedor.BackgroundColor = System.Drawing.Color.MintCream;
             this.dgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProveedor.Location = new System.Drawing.Point(16, 16);
+            this.dgvProveedor.Location = new System.Drawing.Point(21, 20);
+            this.dgvProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvProveedor.Name = "dgvProveedor";
             this.dgvProveedor.RowHeadersWidth = 51;
-            this.dgvProveedor.Size = new System.Drawing.Size(905, 495);
+            this.dgvProveedor.Size = new System.Drawing.Size(1207, 609);
             this.dgvProveedor.TabIndex = 19;
             // 
             // btnSeleccionarCliente
@@ -67,19 +68,20 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.btnSeleccionarCliente.Controls.Add(this.flowLayoutPanel2);
             this.btnSeleccionarCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSeleccionarCliente.Location = new System.Drawing.Point(0, 0);
+            this.btnSeleccionarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSeleccionarCliente.Name = "btnSeleccionarCliente";
-            this.btnSeleccionarCliente.Size = new System.Drawing.Size(937, 60);
+            this.btnSeleccionarCliente.Size = new System.Drawing.Size(1249, 73);
             this.btnSeleccionarCliente.TabIndex = 41;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnSeleccionarProveedor);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(250, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(333, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(14, 14, 0, 14);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(326, 58);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(19, 17, 0, 17);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(435, 71);
             this.flowLayoutPanel1.TabIndex = 25;
             // 
             // btnSeleccionarProveedor
@@ -95,10 +97,10 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.btnSeleccionarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSeleccionarProveedor.IconSize = 26;
             this.btnSeleccionarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeleccionarProveedor.Location = new System.Drawing.Point(14, 14);
-            this.btnSeleccionarProveedor.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.btnSeleccionarProveedor.Location = new System.Drawing.Point(19, 17);
+            this.btnSeleccionarProveedor.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnSeleccionarProveedor.Name = "btnSeleccionarProveedor";
-            this.btnSeleccionarProveedor.Size = new System.Drawing.Size(130, 32);
+            this.btnSeleccionarProveedor.Size = new System.Drawing.Size(173, 41);
             this.btnSeleccionarProveedor.TabIndex = 21;
             this.btnSeleccionarProveedor.Text = "Proveedor";
             this.btnSeleccionarProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,9 +115,10 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.flowLayoutPanel2.Controls.Add(this.btnEliminar);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(16, 14, 16, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(250, 58);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(21, 17, 21, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(333, 71);
             this.flowLayoutPanel2.TabIndex = 24;
             // 
             // btnAgregar
@@ -131,10 +134,10 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 26;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(16, 14);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.btnAgregar.Location = new System.Drawing.Point(21, 17);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(100, 32);
+            this.btnAgregar.Size = new System.Drawing.Size(133, 41);
             this.btnAgregar.TabIndex = 20;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,10 +153,10 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.btnActualizar.IconColor = System.Drawing.Color.White;
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 26;
-            this.btnActualizar.Location = new System.Drawing.Point(124, 14);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnActualizar.Location = new System.Drawing.Point(164, 17);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(32, 32);
+            this.btnActualizar.Size = new System.Drawing.Size(43, 39);
             this.btnActualizar.TabIndex = 21;
             this.btnActualizar.Tag = "Actualizar x";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -168,32 +171,34 @@ namespace Sistema_Facturacion_Restaurantes.Forms
             this.btnEliminar.IconColor = System.Drawing.Color.White;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 26;
-            this.btnEliminar.Location = new System.Drawing.Point(164, 14);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnEliminar.Location = new System.Drawing.Point(217, 17);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(32, 32);
+            this.btnEliminar.Size = new System.Drawing.Size(43, 39);
             this.btnEliminar.TabIndex = 23;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MintCream;
             this.panel1.Controls.Add(this.dgvProveedor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 60);
+            this.panel1.Location = new System.Drawing.Point(0, 73);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(16);
-            this.panel1.Size = new System.Drawing.Size(937, 527);
+            this.panel1.Padding = new System.Windows.Forms.Padding(21, 20, 21, 20);
+            this.panel1.Size = new System.Drawing.Size(1249, 649);
             this.panel1.TabIndex = 42;
             // 
             // FrmProveedorCatalogo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 587);
+            this.ClientSize = new System.Drawing.Size(1249, 722);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSeleccionarCliente);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmProveedorCatalogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Catalogo de proveedor";
