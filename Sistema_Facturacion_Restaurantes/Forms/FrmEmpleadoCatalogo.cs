@@ -14,6 +14,7 @@ namespace Sistema_Facturacion_Restaurantes.Forms
     public partial class FrmEmpleadoCatalogo : Form
     {
         private int SucursalID = 0;
+        String rpta;
         public FrmEmpleadoCatalogo(int Sucursal)
         {
             InitializeComponent();
@@ -126,6 +127,22 @@ namespace Sistema_Facturacion_Restaurantes.Forms
         private void FrmEmpleadoCatalogo_Load(object sender, EventArgs e)
         {
             this.dgvEmpleados.Columns[0].Visible = false;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvEmpleados.Rows.Count == 0 || dgvEmpleados.CurrentCell == null)
+            {
+                MessageBox.Show("Para Eliminar un registro debe seleccionar una fila");
+                return;
+            }
+
+            if (MessageBox.Show("¿Estás seguro de que deseas eliminar este registro importante?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                int EmpleadoID = (int)this.dgvEmpleados.CurrentRow.Cells[0].Value;
+                rpta = CEmpleado.Eliminar(EmpleadoID);
+                this.dgvEmpleados.DataSource = CEmpleado.MostrarEmpleadoPorSucursal(1);
+            }
         }
     }
 }

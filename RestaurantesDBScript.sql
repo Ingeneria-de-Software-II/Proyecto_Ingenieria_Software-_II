@@ -1068,3 +1068,10 @@ EXEC dbo.[Insertar usuario] 20, 'Celeste', 'Miranda', 'Recepcionista'
 Select * From Empleado
 
 delete from Usuario where EmpleadoID = 1
+
+
+CREATE PROC EliminarEmpleado @EmpleadoID int
+as
+	delete Orden where EmpleadoID = @EmpleadoID
+	delete Usuario where EmpleadoID = @EmpleadoID
+	delete Empleado where EmpleadoID= @EmpleadoID

@@ -47,5 +47,12 @@ namespace Sistema_Facturacion_Restaurantes.Controller
             Obj.sucursalID = SucursalID;
             return Obj.Actualizar(Obj);
         }
+
+        public static string Eliminar(int EmpleadoID)
+        {
+            DEmpleado Obj = new DEmpleado();
+            Obj.empleadoID = EmpleadoID;
+            return Obj.Eliminar(Obj);
+        }
     }
 }
