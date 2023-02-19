@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Facturacion_Restaurantes.Data
 {
-    class Conexion
+    public class Conexion
     {
         public static string Cn = @"Data Source=localhost; Initial Catalog=Restaurantes; user=adminRestaurante; password=password01";
     }

@@ -99,7 +99,7 @@ namespace Sistema_Facturacion_Restaurantes.View
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(56, 274);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(467, 2);
             this.panel1.TabIndex = 5;
@@ -108,7 +108,7 @@ namespace Sistema_Facturacion_Restaurantes.View
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.panel2.Location = new System.Drawing.Point(0, 26);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(400, 25);
             this.panel2.TabIndex = 6;
@@ -117,7 +117,7 @@ namespace Sistema_Facturacion_Restaurantes.View
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkGray;
             this.panel3.Location = new System.Drawing.Point(56, 206);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(467, 2);
             this.panel3.TabIndex = 6;
@@ -155,6 +155,7 @@ namespace Sistema_Facturacion_Restaurantes.View
             this.Name = "FrmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "aaaaaaaaaaaaaaaa";
+            this.Load += new System.EventHandler(this.FrmInicioSesion_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

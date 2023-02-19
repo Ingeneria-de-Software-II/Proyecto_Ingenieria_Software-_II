@@ -5,11 +5,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 
 namespace Sistema_Facturacion_Restaurantes.Data
 {
-    class DUsuario
+    public class DUsuario
     {
         public DataTable Validar_acceso(string usuario, string contraseña)
         {
@@ -48,7 +48,7 @@ namespace Sistema_Facturacion_Restaurantes.Data
             catch (Exception ex)
             {
                 DTResultado = null;
-                MessageBox.Show("excepción" + ex);
+//                MessageBox.Show("excepción" + ex);
             }
             return DTResultado;
         }

@@ -192,3 +192,5 @@ C:\Users\duart\Desktop\Proyecto_Ingenieria_Software-_II\Sistema_Facturacion_Rest
 C:\Users\duart\Desktop\Proyecto_Ingenieria_Software-_II\Sistema_Facturacion_Restaurantes\obj\Debug\Sistema_Facturacion_Restaurantes.exe
 C:\Users\duart\Desktop\Proyecto_Ingenieria_Software-_II\Sistema_Facturacion_Restaurantes\obj\Debug\Sistema_Facturacion_Restaurantes.pdb
 C:\Users\LENOVO\Desktop\Verano Ingenieria de Software II\Proyecto_Ingenieria_Software-_II\Sistema_Facturacion_Restaurantes\obj\Debug\Sistema_Facturacion_Restaurantes.csproj.AssemblyReference.cache
+C:\Users\duart\Desktop\Proyecto_Ingenieria_Software-_II\Sistema_Facturacion_Restaurantes\bin\Debug\System.Data.SqlClient.dll
+C:\Users\duart\Desktop\Proyecto_Ingenieria_Software-_II\Sistema_Facturacion_Restaurantes\bin\Debug\System.Data.SqlClient.xml

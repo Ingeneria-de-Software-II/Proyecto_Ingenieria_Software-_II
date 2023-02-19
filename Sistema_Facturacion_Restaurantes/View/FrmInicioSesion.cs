@@ -79,5 +79,10 @@ namespace Sistema_Facturacion_Restaurantes.View
                 txtContraseña.Text = "Contraseña";
             }
         }
+
+        private void FrmInicioSesion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

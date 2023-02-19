@@ -8,7 +8,7 @@ using Sistema_Facturacion_Restaurantes.Reportes;
 
 namespace Sistema_Facturacion_Restaurantes
 {
-    internal static class Program
+    public static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
