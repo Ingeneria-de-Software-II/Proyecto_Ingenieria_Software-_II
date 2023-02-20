@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Facturacion_Restaurantes.Controller
 {
-    class CBebida
+    public class CBebida
     {
         public static DataTable MostrarBebida()
         {

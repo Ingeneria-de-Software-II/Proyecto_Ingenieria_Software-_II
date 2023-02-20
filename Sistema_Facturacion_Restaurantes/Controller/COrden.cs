@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Facturacion_Restaurantes.Controller
 {
-    class COrden
+    public class COrden
     {
         public static string Insertar(int EmpleadoID, int MesaID, int ClienteID, string FechaRealizacion)
         {

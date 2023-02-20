@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Facturacion_Restaurantes.Controller
 {
-    class CComidasDeOrden
+    public class CComidasDeOrden
     {
         public static DataTable Mostrar(int Orden)
         {

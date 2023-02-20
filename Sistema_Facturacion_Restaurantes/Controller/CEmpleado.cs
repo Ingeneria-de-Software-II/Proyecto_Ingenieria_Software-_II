@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace Sistema_Facturacion_Restaurantes.Controller
 {
-    class CEmpleado
+    public class CEmpleado
     {
         public static string Insertar(string Cedula, string Nombres, string Apellidos, string Cargo, string Telefono, string Direccion, int SucursalID)
         {

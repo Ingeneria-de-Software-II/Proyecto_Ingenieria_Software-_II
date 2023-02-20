@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema_Facturacion_Restaurantes", "Sistema_Facturacion_Restaurantes\Sistema_Facturacion_Restaurantes.csproj", "{B6022B76-B68D-4142-AF37-8633F1EABB99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit test", "Unit test\Unit test.csproj", "{20D8514F-3E15-4470-8213-CBAC4867F8B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unit test", "Unit test\Unit test.csproj", "{20D8514F-3E15-4470-8213-CBAC4867F8B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration Test", "Integration Test\Integration Test.csproj", "{34E09773-7184-4333-B7C9-95FE4868BA33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{20D8514F-3E15-4470-8213-CBAC4867F8B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20D8514F-3E15-4470-8213-CBAC4867F8B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20D8514F-3E15-4470-8213-CBAC4867F8B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34E09773-7184-4333-B7C9-95FE4868BA33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E09773-7184-4333-B7C9-95FE4868BA33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E09773-7184-4333-B7C9-95FE4868BA33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E09773-7184-4333-B7C9-95FE4868BA33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

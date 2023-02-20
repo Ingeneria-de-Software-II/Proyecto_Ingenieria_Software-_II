@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Facturacion_Restaurantes.Controller
 {
-    class CInsumo
+    public class CInsumo
     {
         public static DataTable MostrarInsumo()
         {

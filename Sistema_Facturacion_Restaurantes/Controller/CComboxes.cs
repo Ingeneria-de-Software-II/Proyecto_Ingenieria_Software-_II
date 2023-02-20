@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Facturacion_Restaurantes.Controller
 {
-    class CComboxes
+    public class CComboxes
     {
         public static DataTable CargarDepartamentos()
         {

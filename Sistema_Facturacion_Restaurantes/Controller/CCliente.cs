@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Facturacion_Restaurantes.Controller
 {
-    class CCliente
+    public class CCliente
     {
         public static string Insertar(string Cedula, string Nombres, string Apellidos, string Telefono)
         {
