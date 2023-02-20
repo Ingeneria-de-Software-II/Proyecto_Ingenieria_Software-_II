@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Facturacion_Restaurantes.Controller
 {
-    class CSucursal
+    public class CSucursal
     {
         public static DataTable MostrarSucursal()
         {

@@ -11,6 +11,16 @@ namespace Sistema_Facturacion_Restaurantes.Controller
 {
     public class CEmpleado
     {
+        DEmpleado de;
+        public CEmpleado()
+        {
+            
+        }
+
+        public CEmpleado(DEmpleado de)
+        {
+            this.de = de;
+        }
         public static string Insertar(string Cedula, string Nombres, string Apellidos, string Cargo, string Telefono, string Direccion, int SucursalID)
         {
             DEmpleado Obj = new DEmpleado();
@@ -22,6 +32,11 @@ namespace Sistema_Facturacion_Restaurantes.Controller
             Obj.direccion = Direccion;
             Obj.sucursalID = SucursalID;
             return Obj.Insertar(Obj);
+        }
+
+        public virtual string InsertarE(DEmpleado empleadoM)
+        {
+            return empleadoM.Insertar(empleadoM);
         }
 
         public static DataTable MostrarEmpleadoPorSucursal(int SucursalID)

@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace Sistema_Facturacion_Restaurantes.Data
 {
-    class DEmpleado
+    public class DEmpleado
     {
         private string Cedula;
         private string Nombres;
@@ -29,7 +29,7 @@ namespace Sistema_Facturacion_Restaurantes.Data
         public int sucursalID { get => SucursalID; set => SucursalID = value; }
         public int empleadoID { get => EmpleadoID; set => EmpleadoID = value; }
 
-        public string Insertar(DEmpleado empleado)
+        public virtual string Insertar(DEmpleado empleado)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
